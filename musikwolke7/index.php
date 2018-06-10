@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
-    
+
     <link rel="icon" type="image/png" href="../favicon.png" sizes="64x64">
-    
+
     <!-- Bootstrap -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,11 +19,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- ######################################## ENDE BOOTSTRAP TEIL 1######################################## -->
-    <title>Amazon gratis Produkte</title>
+    <title>Musikwolke 7</title>
   </head>
   <body>
 <!-- DEVELOPE FROM HERE-->
-Amazon gratis Produkte
+Musikwolke 7
 
 <!-- UNTIL HERE-->
     <!-- ######################################## BOOTSTRAP TEIL 2 ######################################## -->

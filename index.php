@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Die 3 Meta-Tags oben *müssen* zuerst im head stehen; jeglicher sonstiger head-Inhalt muss *nach* diesen Tags kommen -->
-    
+
     <link rel="icon" type="image/png" href="../favicon.png" sizes="64x64">
 
     <!-- Bootstrap -->
@@ -26,16 +26,16 @@
 <div class="row">
   <div class="col-sm-offset-4 col-sm-4 text-center">
     <h1>Hofelich Home</h1>
-    <h6>Bitte registieren Sie sich um fortzufahren.</h6>
+    <h6>Bitte melden Sie sich an um fortzufahren.</h6>
   </div>
 </div>
 
 <div class="row"><div class="col-sm-12 hidden-xs"><br></div></div>
-    
-<div class="container well">
+
+<div class="container well well-lg">
   <form class="form-horizontal" method="POST">
   <div class="form-group">
-   
+
     <label for="username" class="col-sm-4 control-label">Benutzername</label>
     <div class="col-sm-6">
       <input type="text" class="form-control" id="username" placeholder="Benutzername">
@@ -48,11 +48,18 @@
     </div>
   </div>
   <div class="form-group">
-    <div class="col-md-offset-4 col-md-4">
-      <button type="submit" class="btn btn-default">Registrieren</button>
-      <a href="../index.php" class="btn btn-default">Zurück zum Login</a>
+    <div class="col-sm-offset-4 col-sm-5">
+      <div class="checkbox">
+        <label><input type="checkbox"> Anmeldung speichern</label>
+      </div>
     </div>
-   </div>
+  </div>
+  <div class="form-group">
+    <div class="col-md-offset-4 col-md-4">
+      <button type="submit" class="btn btn-default">Anmelden</button>
+      <a href="../register.php" class="btn btn-default">Registrieren</a>
+    </div>
+  </div>
 </form>
 </div>
 <!-- UNTIL HERE-->

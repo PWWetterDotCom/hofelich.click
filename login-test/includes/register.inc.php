@@ -14,7 +14,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
         // Not a valid email
         $error_msg .= '<p class="error">The email address you entered is not valid</p>';
     }
-    
+
     $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);
     if (strlen($password) != 128) {
         // The hashed pwd should be 128 characters long.
@@ -26,15 +26,15 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
     //
-    
+
     $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";
     $stmt = $mysqli->prepare($prep_stmt);
-    
+
     if ($stmt) {
         $stmt->bind_param('s', $email);
         $stmt->execute();
         $stmt->store_result();
-        
+
         if ($stmt->num_rows == 1) {
             // A user with this email address already exists
             $error_msg .= '<p class="error">A user with this email address already exists.</p>';
@@ -42,8 +42,8 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
     } else {
         $error_msg .= '<p class="error">Database error</p>';
     }
-    
-    // TODO: 
+
+    // TODO:
     // We'll also have to account for the situation where the user doesn't have
     // rights to do registration, by checking what type of user is attempting to
     // perform the operation.
@@ -52,10 +52,10 @@ if (isset($_POST['username'], $_POST['email'], $_POST['p'])) {
         // Create a random salt
         $random_salt = hash('sha512', uniqid(openssl_random_pseudo_bytes(16), TRUE));
 
-        // Create salted password 
+        // Create salted password
         $password = hash('sha512', $password . $random_salt);
 
-        // Insert the new user into the database 
+        // Insert the new user into the database
         if ($insert_stmt = $mysqli->prepare("INSERT INTO members (username, email, password, salt) VALUES (?, ?, ?, ?)")) {
             $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt);
             // Execute the prepared query.

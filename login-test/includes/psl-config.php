@@ -3,7 +3,7 @@
 /**
  * This file contains global configuration variables
  * Things like whether anyone can register.
- * 
+ *
  * Whether or not it's a secure (https) connection could
  * also go here...
  */
@@ -11,9 +11,9 @@
 /**
  * These are the database login details
  */
-define("HOST", "localhost"); 			// The host you want to connect to. 
-define("USER", "test1"); 			// The database username. 
-define("PASSWORD", "test"); 	// The database password. 
+define("HOST", "localhost"); 			// The host you want to connect to.
+define("USER", "test1"); 			// The database username.
+define("PASSWORD", "test"); 	// The database password.
 define("DATABASE", "secure_login");             // The database name.
 
 /**
@@ -22,7 +22,7 @@ define("DATABASE", "secure_login");             // The database name.
  *      any  == anybody can register (default)
  *      admin == members must be registered by an administrator
  *      root  == only the root user can register members
- * 
+ *
  * Values for default role can be any valid role, but it's hard to see why
  * the default 'member' value should be changed under the standard setup.
  * However, additional roles can be added and so there's nothing stopping
@@ -34,7 +34,7 @@ define("DEFAULT_ROLE", "member");
 /**
  * Is this a secure connection?  The default is FALSE, but the use of an
  * HTTPS connection for logging in is recommended.
- * 
+ *
  * If you are using an HTTPS connection, change this to TRUE
  */
 define("SECURE", FALSE);    // For development purposes only!!!!
